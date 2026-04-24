@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const notas = [8, 5, 6, 9, 4, 7, 10, 3, 6, 2];
+        document.write("<h3>Notas:</h3>");
+        for (let i = 0; i < notas.length; i++) {
+            document.write(`${notas[i]}<br>`);
+        }
+        document.write("<h3>Notas aprobadas (>=6):</h3>");
+        for (let i = 0; i < notas.length; i++) {
+            if (notas[i] >= 6) {
+                document.write(`${notas[i]}<br>`)
+            }
+        }
+        document.write("<h3>Notas desaprobadas (<6):</h3>");
+        for (let i = 0; i < notas.length; i++) {
+            if (notas[i] < 6) {
+                document.write(`${notas[i]}<br>`)
+            }
+        }
+        let suma = 0;
+        for (let i = 0; i < notas.length; i++) {
+            suma += notas[i];
+        }
+        const promedio = suma / notas.length;
+        document.write(`<h3>Promedio general:${promedio.toFixed(2)}</h3>`)
+
+        let cantidadAprobadas = 0;
+        for (let i = 0; i < notas.length; i++) {
+            if (notas[i] >= 6) {
+                cantidadAprobadas++;
+            }
+        }
+        document.write(`<h3>Cantidad de notas aprobadas: ${cantidadAprobadas}</h3>`)
+    </script>
+</body>
+
+</html>
