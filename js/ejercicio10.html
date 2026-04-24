@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 10</title>
+</head>
+<body>
+    <script>
+        const numeros = [];
+        const cantidad = prompt("Ingrese la cantidad de numeros: ");
+        let numero = 0, suma = 0;
+        for(let i = 0; i < cantidad; i++){
+            numero = prompt("Ingrese un numero: ");
+            numeros.push(parseFloat(numero));
+            suma += numeros[i];
+        }
+        document.write("Numeros ingresados:<br>");
+        for(let i = 0; i < numeros.length; i++){
+            document.write(`${numeros[i]}<br>`);
+        }
+        document.write(`Promedio: ${suma / numeros.length}`);
+    </script>
+</body>
+</html>
