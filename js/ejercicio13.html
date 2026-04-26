@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+
+<body>
+    <script>
+        function mostrarArreglo(arr) {
+            document.write("<h3>Elementos del arreglo:</h3>");
+            for (let i = 0; i < arr.length; i++) {
+                document.write(`${arr[i]}<br>`);
+            }
+        }
+
+        const cantidad = parseInt(prompt("¿Cuántos números desea ingresar en el arreglo?"));
+
+        const numeros = [];
+
+        for (let i = 0; i < cantidad; i++) {
+            const num = parseInt(prompt(`Ingrese el número ${i + 1}:`));
+            numeros.push(num);
+        }
+        mostrarArreglo(numeros);
+    </script>
+</body>
+
+</html>
