@@ -1,0 +1,51 @@
+:root{
+    --color-principal: #000099;
+    --fuente-principal: Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: var(--fuente-principal);
+}
+
+header{
+    grid-area: header;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main{
+    grid-area: main;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
