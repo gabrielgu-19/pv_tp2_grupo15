@@ -9,24 +9,20 @@
 
 <body>
     <script>
-
-        function retornarMes(num) {
+ const retornarMes = (num) => {
             const meses = [
                 "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
                 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
             ];
 
-            if (num >= 1 && num <= 12) {
-                return meses[num - 1];
-            } else {
-                return "El número ingresado no corresponde a un mes.";
-            }
-        }
+            return (num >= 1 && num <= 12) 
+                ? meses[num - 1] 
+                : "El número ingresado no corresponde a un mes.";
+        };
 
         const numero = parseInt(prompt("Ingrese un número entre 1 y 12:"));
 
-
-        document.write(`<h3>Resultado:</h3>`);
+        document.write("<h3>Resultado:</h3>");
         document.write(retornarMes(numero));
 
     </script>
